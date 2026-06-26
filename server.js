@@ -107,7 +107,7 @@ async function callOpenAI(prompt) {
             messages: [
                 { role: 'system', content: prompt }
             ],
-            max_completion_tokens: 2000,
+            max_completion_tokens: 8000,
             response_format: { type: "json_object" }
         })
     });
@@ -138,7 +138,7 @@ async function callGemini(prompt) {
                 parts: [{ text: prompt }]
             }],
             generationConfig: {
-                maxOutputTokens: 3000,
+                maxOutputTokens: 8000,
                 response_mime_type: "application/json"
             }
         })
